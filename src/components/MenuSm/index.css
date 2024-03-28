@@ -1,0 +1,61 @@
+.menu-small {
+  position: relative;
+  width: 100%;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  
+  padding: 10px;
+}
+
+.logo-sm {
+  width: 50px;
+}
+
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.open .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.menu-links {
+  display: none;
+  position: relative;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color:black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.open{
+  display: block;
+}
